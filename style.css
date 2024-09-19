@@ -1,0 +1,383 @@
+@font-face {
+  font-family: acumin;
+  src: url(../fonts/Acumin-RPro.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: acumin;
+}
+body,
+html {
+  min-height: 100vh;
+  width: 100%;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* navbar bar */
+
+nav {
+  height: 55px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.5px solid rgba(224, 220, 220, 0.433);
+  border-radius: 100px;
+  background-color: #080a15;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.navbar-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  gap: 20px;
+}
+
+.navbar-left::after {
+  content: "";
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  left: 0;
+  top: 140%;
+  border-radius: 50px;
+  background-color: blue;
+}
+
+.navbar-left a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-left h4 {
+  font-size: 20px;
+  font-weight: 15px;
+}
+
+.navbar-left h3 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.navbar-left h3 a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-right {
+  height: 40px;
+  width: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-right: 7px;
+  border-radius: 50px;
+}
+
+.navbar-right h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: black;
+}
+
+/* hero section */
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.hero-left {
+  height: 100vh;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10%;
+}
+
+.hero-left h1 {
+  padding-top: 10px;
+  font-size: 20vw;
+}
+
+.hero-left h4 {
+  font-weight: 300;
+  font-size: 20px;
+  color: #a9a8a8;
+}
+
+.hero-left h4:nth-child(3) {
+  padding-left: 20px;
+  font-size: 15px;
+  border-left: 1px solid #a9a8a8;
+}
+
+.hero-right {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+}
+
+.social-media {
+  position: absolute;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
+  height: 25%;
+  width: 8%;
+  background-color: black;
+  row-gap: 25px;
+}
+
+.social-media a {
+  font-size: 25px;
+  text-decoration: none;
+  border: 0.2px solid white;
+  background-color: white;
+  border-radius: 100%;
+  color: black;
+  padding: 6px 4px;
+  transition: ease all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media a:hover {
+  border: 0.2px solid yellow;
+  background-color: yellow;
+}
+
+/* custom cursor */
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: fixed;
+  align-items: center;
+  text-align: center;
+  padding: 1px;
+  z-index: 98;
+}
+
+/* about section */
+
+.about-section {
+  position: relative;
+  padding-block: 20vh;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+
+.about {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.about-content {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  margin-inline: 10%;
+}
+.about-content-left {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #bbbbbb;
+  border: 3px solid white;
+  background-image: url(./assets/christopher-gower-m_HRfLhgABo-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.about-content-right {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  top: 30%;
+  left: 45%;
+}
+
+.about-content-right h1 {
+  font-size: 22px;
+}
+
+.about-content-left h1 {
+  position: absolute;
+  width: max-content;
+  left: 110%;
+  top: 10%;
+  font-size: 10vh;
+}
+
+.about::after {
+  content: "";
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    45deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  height: 100%;
+  width: 100%;
+  z-index: -9;
+  position: absolute;
+  transform: skewY(-5deg);
+}
+
+/* skill section */
+.skill {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  height: max-content;
+  width: 100%;
+  padding-block: 20px;
+  row-gap: 3rem;
+  column-gap: 1rem;
+}
+.skill-tittle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / span 5;
+}
+.skill-tittle h1 {
+  font-size: 60px;
+}
+.skill-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #fff;
+  height: 250px;
+  width: 200px;
+  overflow: hidden;
+}
+.skill-background {
+  padding-top: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border: 4px solid white;
+}
+.skill-background img {
+  position: absolute;
+  height: 100%;
+  width: 90%;
+}
+.skill-content {
+  height: 50%;
+  width: 100%;
+}
+.skill-content img {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-35px, -30px);
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 3px;
+  object-fit: contain;
+  background-color: white;
+}
+.skill-content h3 {
+  position: absolute;
+  width: max-content;
+  left: 50%;
+  top: 80%;
+  transform: translate(-35px, -30px);
+  color: #080a15;
+}
+
+/* contact section */
+p{
+  color: black;
+}
+.uf-contact-form-01 {
+  max-width: 900px;
+}
+
+.uf-img-contact-form-01 {
+  max-width: 100%;
+  animation: uf-animation 4s ease-in-out 1s infinite alternate;
+  position: relative;
+}
+.uf-ct-01-text-primary {
+  color: #864ef2;
+}
+.uf-ct-01-btn-primary {
+  background-color: #864ef2;
+  color: #fff;
+}
+.uf-ct-01-btn-primary:hover {
+  background-color: #641eec;
+  color: #fff;
+}
+
+@keyframes uf-animation {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -30px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.form-control:focus {
+  border-color: #a979ff;
+  box-shadow: 0 0 0 0.25rem rgb(103 58 183 / 21%);
+}
+.form-label {
+  color: black;
+}
