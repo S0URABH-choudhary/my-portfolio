@@ -2,7 +2,7 @@ var main = document.querySelector(".main");
 var cursor = document.querySelector(".circle");
 var contact_button = document.querySelector(".navbar-right")
 var area = document.querySelector(".social-media" )
-
+var contactarea = document.querySelector(".contact-form")
 
 const movingball = () =>{
     main.addEventListener("mousemove", function(dets) {
@@ -27,6 +27,16 @@ const shrink = () =>{
             scale:1
         })
     })
+   contactarea.addEventListener("mouseenter",function(){
+        gsap.to(cursor,{
+            scale:0,
+        })
+    })
+    contactarea.addEventListener("mouseleave",function(){
+        gsap.to(cursor,{
+            scale:1
+        })
+    })
     contact_button.addEventListener("mouseenter",function(){
         gsap.to(cursor,{
             scale:0
@@ -45,3 +55,4 @@ const shrink = () =>{
     })
 }
 shrink()
+

@@ -253,12 +253,8 @@ nav {
 
 .about::after {
   content: "";
-  background: rgb(63, 94, 251);
-  background: linear-gradient(
-    45deg,
-    rgba(63, 94, 251, 1) 0%,
-    rgba(252, 70, 107, 1) 100%
-  );
+  background: rgb(0,127,255);
+  background: linear-gradient(45deg, rgba(0,127,255,1) 18%, rgba(124,185,232,1) 44%, rgba(108,180,238,1) 68%);
   height: 100%;
   width: 100%;
   z-index: -9;
