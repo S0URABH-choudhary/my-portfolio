@@ -32,7 +32,7 @@ const shrink = () =>{
             scale:0
         })
         gsap.to(contact_button,{
-            backgroundColor:"yellow"
+            backgroundColor:"#209CEE"
         })
     })
     contact_button.addEventListener("mouseleave",function(){

@@ -178,8 +178,8 @@ nav {
 }
 
 .social-media a:hover {
-  border: 0.2px solid yellow;
-  background-color: yellow;
+  border: 0.2px solid #209CEE;
+  background-color: #209CEE;
 }
 
 /* custom cursor */
@@ -188,7 +188,7 @@ nav {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: #209CEE;
   position: fixed;
   align-items: center;
   text-align: center;
@@ -339,30 +339,6 @@ nav {
 }
 
 /* contact section */
-p{
-  color: black;
-}
-.uf-contact-form-01 {
-  max-width: 900px;
-}
-
-.uf-img-contact-form-01 {
-  max-width: 100%;
-  animation: uf-animation 4s ease-in-out 1s infinite alternate;
-  position: relative;
-}
-.uf-ct-01-text-primary {
-  color: #864ef2;
-}
-.uf-ct-01-btn-primary {
-  background-color: #864ef2;
-  color: #fff;
-}
-.uf-ct-01-btn-primary:hover {
-  background-color: #641eec;
-  color: #fff;
-}
-
 @keyframes uf-animation {
   0% {
     top: 0px;
@@ -374,10 +350,75 @@ p{
     top: 0px;
   }
 }
-.form-control:focus {
-  border-color: #a979ff;
-  box-shadow: 0 0 0 0.25rem rgb(103 58 183 / 21%);
+.contact{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
 }
-.form-label {
+
+.contact-form{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: 80%;
+  width: 70%;
+  margin-top: 5%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.contact-form-image{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+  width: 100%;
+  height: 90%;
+  line-height: 30px;
+  background-color: #fff;
+}
+.contact-form-image img{
+  height: 60%;
+  width: 100%;
+  position: relative;
+  animation: uf-animation 2.5s infinite alternate;
+  object-fit: contain;
+}
+
+.contact-form-image h1{
+  color: #864EF2;
+}
+
+.contact-form form{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+
+form input,label{
   color: black;
+}
+form label,button{
+  margin-top: 20px;
+}
+form input,textarea{
+  padding: 10px 3px;
+  border: 2px solid rgb(215, 212, 212);
+  border-radius: 5px;
+}
+form button{
+  width: max-content;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: #864EF2;
 }

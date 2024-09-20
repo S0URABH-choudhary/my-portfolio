@@ -3,12 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>portfolio</title>
     <link
-      rel="stylesheet"
-      type="text/css"
-      href="./assets/css/bootstrap.min.css"
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon_io/apple-touch-icon.png"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon_io/favicon-16x16.png"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
   </head>
@@ -109,77 +122,50 @@
           </div>
         </div>
       </section>
-      <section class="uf-contact-form-01 mx-auto">
-        <div class="container">
-          <div
-            class="row justify-content-center bg-white rounded-4 shadow py-5 gx-5 px-lg-5"
-          >
-            <div class="col-md-6 text-center">
-              <h2 class="uf-ct-01-text-primary text-uppercase fw-bold">
-                Contact Me
-              </h2>
-              <p>
-                Or reach out manually to
-                <a
-                  href="saurabhchoudhary91659@gmail.com"
-                  class="text-decoration-none"
-                  >saurabhchoudhary91659@gmail.com</a
-                >
-              </p>
-              <img
-                src="./images/plane.png"
-                alt=""
-                class="uf-img-contact-form-01 pt-4 d-md-block d-none"
-              />
-            </div>
-            <div class="col-md-6">
-              <form netlify>
-                <div class="mb-3">
-                  <label for="uf-imail" class="form-label">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="uf-imail"
-                    aria-describedby="emailHelp"
-                  />
-                  <div id="emailHelp" class="form-text uf-ct-01-text-primary">
-                    I'll never share your email with anyone else.
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="uf-iname" class="form-label">Your name</label>
-                  <input type="text" class="form-control" id="uf-iname" />
-                </div>
-                <div class="mb-3">
-                  <label for="uf-itextarea" class="form-label"
-                    >Your message</label
-                  >
-                  <textarea
-                    class="form-control"
-                    id="uf-itextarea"
-                    rows="3"
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-lg uf-ct-01-btn-primary">
-                  Send Message
-                </button>
-              </form>
-            </div>
+      <secrion class="contact">
+        <div class="contact-form">
+          <div class="contact-form-image">
+            <h1>CONTACT ME</h1>
+            <h4 style="font-weight: 500; line-height: 45px; font-size: large; color:black">or reach out manually to</h4>
+            <a style="text-decoration: none; line-height: 5px; margin-bottom: 80px; color: #0A58D4;" href="#">saurabhchoudhary91659@gmail.com</a>
+            <img   src="./images/plane.png" alt="image">
           </div>
+          <form action="#">
+            <label for="email-id">Email address</label>
+            <input
+              type="email"
+              id="email-id"
+              name="email"
+              placeholder="Enter your email..."
+              required
+            />
+            <div style="color: rgb(134, 78, 242)">I'll never share your data with anyone else</div>
+            <label for="your-name">Your name</label>
+            <input
+              type="text"
+              name="name"
+              id="your-name"
+              placeholder="Enter you name..."
+            />
+            <label for="subject">Your message</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height: 170px"
+            ></textarea>
+            <button >Send message</button>
+          </form>
         </div>
-      </section>
+      </secrion>
     </div>
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script
-      src="https://kit.fontawesome.com/7b43e0e106.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/7b43e0e106.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>
