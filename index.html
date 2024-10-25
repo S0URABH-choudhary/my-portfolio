@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="responsive.css" />
 </head>
 
-<body>
+<body >
   <div class="main">
     <div class="circle"></div>
     <nav>
@@ -24,7 +24,13 @@
         <h3><a href="#">project</a></h3>
       </div>
       <div class="navbar-right">
-        <h3><a href="#contact">Contact me</a></h3>
+        <div class="toggle-button">
+          <label class="switch" for="checkbox">
+            <input type="checkbox" id="checkbox" checked/>
+            <div class="slider round"></div>
+          </label>
+        </div>
+       <div class="contact-wrap"> <h3><a class="text" href="#contact">Contact me</a></h3></div>
       </div>
     </nav>
     <div id="home" class="hero">
@@ -37,11 +43,22 @@
         </h4>
       </div>
       <div class="hero-right">
+        <div class="avtarbackgroung"></div>
+        <div class="window">
+          <img id="sun" src="./assets/icons8-sun-48.png" alt="img">
+          <img id="cloud-2" src="./assets/cloud.png" alt="img">
+          <img id="cloud-1" src="./assets/cloud.png" alt="img">
+          <img src="./assets/stars.png" alt="" id="stars">
+          <img id="moon" src="./assets/icons8-moon-48.png" alt="img">
+        </div>
+        <div class="avatar"><img src="./assets/Untitled_design__1_-removebg-preview.png" alt="img"></div>
+        <div class="avatarnight" ><img src="./assets/Untitled_design-removebg-preview.png" alt="img"></div>
+        <div class="blueprint"><a href="#"><img src="./assets/bluprint-removebg-preview.png" alt="img"></a></div>
         <div class="social-cover"></div>
         <div class="social-media">
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="https://github.com/S0URABH-choudhary" target="_blank"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-discord"></i></a>
+          <a class="links" href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a class="links" href="https://github.com/S0URABH-choudhary" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a class="links" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
@@ -62,6 +79,7 @@
         </div>
       </div>
     </section>
+    <!--------------------------------------- skill section starts---------------------------------------------------------------------->
     <section id="skill" class="skill">
       <div class="skill-tittle">
         <h1>Skills</h1>
@@ -111,35 +129,47 @@
           <h3>Tailwind</h3>
         </div>
       </div>
+      <div class="learning">
+        <h1>more are yet to come</h1>
+      </div>
     </section>
+    <!--------------------------------------- skill section ends--------------------------------------------------------------------------->
+
     <!--------------------------------------- project section starts---------------------------------------------------------------------->
     <section class="projects"></section>
     <!--------------------------------------- project section ends------------------------------------------------------------------------->
-    
+
     <secrion id="contact" class="contact">
       <div class="contact-form">
         <div class="contact-form-image">
           <h1>CONTACT ME</h1>
-          <h4 style="font-weight: 500; line-height: 45px; font-size: large; color:black">or reach out manually to</h4>
-          <a style="text-decoration: none; line-height: 5px; margin-bottom: 80px; color: #0A58D4;"
-            href="#">saurabhchoudhary91659@gmail.com</a>
-          <img src="./images/plane.png" alt="image">
+          <h4 >
+            or reach out manually to
+          </h4>
+          <a style="
+                text-decoration: none;
+                line-height: 5px;
+                margin-bottom: 80px;
+                color: #0a58d4;
+              " href="mailto:saurabhchoudhary91659@gmail.com">saurabhchoudhary91659@gmail.com</a>
+          <img src="./images/plane.png" alt="image" />
         </div>
-        <form action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="b3d0ba4b-61da-46e3-ac88-8638ad76c5d2">
+        <form onsubmit="sendmail(); reset(); return false">
           <label for="email-id">Email address</label>
           <input type="email" id="email-id" name="email" placeholder="Enter your email..." required />
-          <div style="color: rgb(134, 78, 242)">I'll never share your data with anyone else</div>
+          <div style="color: rgb(134, 78, 242)">
+            I'll never share your data with anyone else
+          </div>
           <label for="your-name">Your name</label>
           <input type="text" name="name" id="your-name" placeholder="Enter you name..." />
           <label for="subject">Your message</label>
           <textarea id="subject" name="subject" placeholder="Write something.." style="height: 170px"></textarea>
-          <button style="cursor:pointer;" type="submit">Send message</button>
+          <button style="cursor: pointer" type="submit">Send message</button>
         </form>
       </div>
     </secrion>
   </div>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
