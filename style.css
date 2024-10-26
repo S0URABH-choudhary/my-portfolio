@@ -620,3 +620,8 @@ form button {
   color: white;
   background-color: rgb(134, 78, 242);
 }
+
+#email-statue{
+  margin-top: 2px;
+  color: black;
+}

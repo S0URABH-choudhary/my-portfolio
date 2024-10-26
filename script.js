@@ -14,6 +14,10 @@ var cloud1 = document.getElementById("cloud-2")
 var cloud2 = document.getElementById("cloud-1")
 var stars = document.getElementById("stars")
 var bluprints = document.querySelector(".blueprint")
+var Status = document.getElementById("email-statue")
+var contactform = document.getElementById("contact-form")
+
+
 
 gsap.to(moon,{
     top:"20%",
@@ -165,16 +169,30 @@ const shrink = () =>{
 }
 shrink()
 
-const  sendmail = () =>{
-    var params = {
-        name:document.getElementById("your-name").value,
-        email:document.getElementById("email-id").value,
-        message:document.getElementById("subject").value,
-    };
-    const serviceid = "service_a9ivaew";
-    const templateid = "template_gmluw2n";
-
-    emailjs.sent(serviceid,templateid,params)
+contactform.addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent default form submission
     
-    .catch(err=>console.log(err));
-}
+    const form = event.target;
+    const formData = new FormData(form);
+    console.log(form)
+  
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+  
+      if (response.ok) {
+        // Show a success message or update the UI
+        Status.innerText = "Email sent successfully!";
+        form.reset(); // Optional: Clear the form fields after submission
+      } else {
+        // Handle non-200 responses
+        Status.innerText = "Failed to send email. Please try again.";
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      Status.innerText = "An error occurred. Please try again.";
+    }
+  });
+  
