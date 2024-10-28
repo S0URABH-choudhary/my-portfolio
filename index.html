@@ -70,10 +70,7 @@
           </div>
           <div class="about-content-right">
             <h1 id="summry">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-              sint rerum temporibus unde, illo dolor in. Quisquam aliquid
-              velit itaque tempora consequatur, inventore atque. Optio
-              doloribus eos exercitationem! Esse, velit.
+              I'm a passionate front-end developer with a keen eye for creating engaging and responsive web experiences. With a strong foundation in HTML, CSS, JavaScript, Tailwind, and React, I thrive on crafting intuitive user interfaces and continuously exploring new ways to enhance web performance and design.
             </h1>
           </div>
         </div>
@@ -139,7 +136,8 @@
     <section class="projects"></section>
     <!--------------------------------------- project section ends------------------------------------------------------------------------->
 
-    <secrion id="contact" class="contact">
+    <section id="contact" class="contact">
+      <div class="notification "></div>
       <div class="contact-form">
         <div class="contact-form-image">
           <h1>CONTACT ME</h1>
@@ -154,10 +152,10 @@
               " href="mailto:saurabhchoudhary91659@gmail.com">saurabhchoudhary91659@gmail.com</a>
           <img src="./images/plane.png" alt="image" />
         </div>
-        <form id="contact-form">
+        <form id="contact-form" onsubmit="return send()">
           <input type="hidden" name="access_key" value="b3d0ba4b-61da-46e3-ac88-8638ad76c5d2">
           <label for="email-id">Email address</label>
-          <input type="email" id="email-id" name="email" placeholder="Enter your email..." required />
+          <input type="text" id="email-id" name="email" placeholder="Enter your email..."  />
           <div style="color: rgb(134, 78, 242)">
             I'll never share your data with anyone else
           </div>
@@ -165,11 +163,11 @@
           <input type="text" name="name" id="your-name" placeholder="Enter you name..." />
           <label for="message">Your message</label>
           <textarea id="message" name="message" placeholder="Write something.." style="height: 170px"></textarea>
-          <button style="cursor: pointer" type="submit">Send message</button>
+          <button style="cursor: pointer" type="submit" >Send message</button>
           <div id="email-statue"></div>
         </form>
       </div>
-    </secrion>
+    </section>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

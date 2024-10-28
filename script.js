@@ -19,6 +19,7 @@ var contactform = document.getElementById("contact-form")
 
 
 
+
 gsap.to(moon,{
     top:"20%",
     opacity:1,
@@ -169,30 +170,67 @@ const shrink = () =>{
 }
 shrink()
 
+
 contactform.addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent default form submission
     
     const form = event.target;
     const formData = new FormData(form);
-    console.log(form)
-  
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      });
-  
-      if (response.ok) {
-        // Show a success message or update the UI
-        Status.innerText = "Email sent successfully!";
-        form.reset(); // Optional: Clear the form fields after submission
-      } else {
-        // Handle non-200 responses
-        Status.innerText = "Failed to send email. Please try again.";
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      Status.innerText = "An error occurred. Please try again.";
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    
+    if(document.getElementById("email-id").value !== "" && !emailPattern.test(document.getElementById("email-id").value)){
+        shownotification(warningmsgemail)
+    }else if(document.getElementById("your-name").value === ""|| document.getElementById("email-id").value === ""|| document.getElementById("message").value === ""){
+        shownotification(warningmsg);
+        return false;
+    }else{
+        try {
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+          });
+      
+          if (response.ok) {
+            // Show a success message or update the UI
+            shownotification(successmsg)
+            form.reset(); // Optional: Clear the form fields after submission
+          } else {
+            // Handle non-200 responses
+            Status.innerText = "Failed to send email. Please try again.";
+          }
+        }catch (error) {
+            console.error('Error:', error);
+            Status.innerText = "An error occurred. Please try again.";
+          } 
     }
-  });
   
+   
+  });
+
+
+// =============================================custom notifition message======================================================
+let notification = document.querySelector(".notification")
+let successmsg = '<i class="fa-solid fa-circle-check"></i> submitted sucessfully'
+let warningmsg = '<i class="fa-solid fa-circle-exclamation"></i> empty input field , cannot submit'
+let warningmsgemail = '<i class="fa-solid fa-circle-exclamation"></i> invalid email address'
+let errormsg = '<i class="fa-solid fa-circle-xmark"></i> invalid input, please correct it'
+
+
+shownotification = (msg) => {
+   let toast = document.createElement("div");
+   toast.classList.add("notification-msg");
+   toast.innerHTML = msg;
+   notification.appendChild(toast)
+
+   if (msg.includes("cannot")||msg.includes("email")){
+    toast.classList.add("warning")
+   }
+   if(msg.includes("correct")){
+    toast.classList.add("error")
+   }
+
+   setTimeout(() => {
+    toast.remove();
+   },5500);
+}

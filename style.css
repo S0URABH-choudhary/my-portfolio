@@ -534,6 +534,12 @@ nav {
   }
 }
 
+@keyframes anime{
+  100%{
+    width: 0;
+  }
+}
+
 .contact {
   position: relative;
   display: flex;
@@ -541,6 +547,59 @@ nav {
   justify-content: center;
   height: 100vh;
   width: 100%;
+}
+
+.notification{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+  padding: 20px;
+}
+
+.notification-msg{
+  width: 350px;
+  height: 60px;
+  background: white;
+  font-weight: 500;
+  margin: 15px 0;
+  color: black;
+  box-shadow: 0 0 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.notification-msg i{
+  margin: 0 20px;
+  font-size: 30px;
+  color: green;
+}
+.notification-msg::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: green;
+  animation: anime 5s linear forwards;
+}
+.warning i{
+  color: orange;
+}
+
+.error i{
+  color: red;
+}
+
+.notification-msg.warning::after{
+  background-color: orange;
+}
+
+.notification-msg.error::after{
+  background-color: red;
 }
 
 .contact-form {
