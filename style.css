@@ -5,13 +5,17 @@
 
 :root{
   --primary-color: black;
+  --primary-color-2: rgb(10, 9, 9);
   --secondary-color: white;
+  --secondary-color-2: rgb(186, 183, 183);
   --tertiary-color: #209CEE;
 }
 
 .light-theme{
   --primary-color: white;
+  --primary-color-2: white;
   --secondary-color: black;
+  --secondary-color-2: black;
   --tertiary-color: #209CEE;
 }
 .light-theme .avatarnight{
@@ -361,71 +365,60 @@ nav {
 }
 
 /* about section */
-
-.about-section {
+.about-wrapper{
   position: relative;
-  padding-block: 20vh;
-  height: 100vh;
   width: 100%;
-  background-color: var(--primary-color);
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.about {
-  position: relative;
-  height: 70vh;
-  width: 100%;
-  z-index: 1;
-  isolation: isolate;
+.about{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 50vh;
+  padding: 20px;
+  column-gap: 10px;
+  row-gap: 20px;
 }
-
-.about-content {
-  position: absolute;
-  width: 80%;
+.about-tittle{
+  display: flex;
+  grid-column: 1 / span 2;
+}
+.about-tittle h1{
+  font-size: 40px;
+}
+.about-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  margin-inline: 10%;
+  width: 20vw;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--primary-color-2);
 }
 
-.about-content-left {
-  position: absolute;
-  width: 40%;
+.about-image img{
+  height: 130px;
+  width: 130px;
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+.about-info{
+  display: flex;
+  padding: 60px 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--primary-color-2);
   height: 100%;
-  border-radius: 50%;
-  background-color: #bbbbbb;
-  border: 3px solid var(--secondary-color);
-  background-image: url(./assets/christopher-gower-m_HRfLhgABo-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
+  width: 40vw;
+  border-radius: 50px;
 }
-
-.about-content-right {
-  position: absolute;
-  width: 60%;
-  height: 100%;
-  top: 30%;
-  left: 45%;
-}
-
-.about-content-right h1 {
-  font-size: 22px;
-}
-
-.about-content-left h1 {
-  position: absolute;
-  width: max-content;
-  left: 110%;
-  top: 10%;
-  font-size: 10vh;
-}
-
-.about::after {
-  content: "";
-  background: rgb(0, 127, 255);
-  background: linear-gradient(45deg, rgba(0, 127, 255, 1) 18%, rgba(124, 185, 232, 1) 44%, rgba(108, 180, 238, 1) 68%);
-  height: 100%;
-  width: 100%;
-  z-index: -9;
-  position: absolute;
-  transform: skewY(-5deg);
+.about-info p{
+  line-height: 20px;
+  color: var(--secondary-color-2);
 }
 
 /* skill section */
@@ -448,7 +441,7 @@ nav {
 }
 
 .skill-tittle h1 {
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .skill-card {
@@ -456,7 +449,8 @@ nav {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  background-color:  var(--secondary-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color:  var(--primary-color-2);
   height: 250px;
   width: 200px;
   overflow: hidden;
@@ -469,9 +463,10 @@ nav {
   justify-content: center;
   height: 60%;
   width: 100%;
+  border-radius: 10px;
   overflow: hidden;
   background-color: whitesmoke;
-  border: 4px solid var(--secondary-color);
+  border: 4px solid var(--primary-color-2);
 }
 
 .skill-background img {
@@ -505,11 +500,12 @@ nav {
   left: 50%;
   top: 80%;
   transform: translate(-35px, -30px);
-  color: var(--primary-color);
+  color: var(--secondary-color-2);
 }
 
 .learning {
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--secondary-color-2);
+  color: var(--secondary-color-2);
   padding-inline: 10px;
   border-radius: 10px;
   grid-column: 1 /span 5;
@@ -517,6 +513,57 @@ nav {
 
 .learning h1 {
   font-weight: 300;
+}
+
+/* project section */
+.shildP
+posi
+.projects{
+  position: relative;
+  width: 100%;
+}
+.project-tittle{
+  display: flex;
+  padding: 1vw 3vw;
+  width: 100%;
+}
+.project-tittle h1{
+  text-transform: capitalize;
+  font-size: 2.2vw;
+}
+.project-cover{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1vw 3vw;
+  background-color: red;
+  border-top: 1px solid #888;
+  z-index: 10;
+}
+.project-cover h1{
+  font-size: 7vw;
+}
+
+.project{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1vw 3vw;
+  border-top: 1px solid #888;
+}
+.project img{
+ position: absolute;
+ opacity: 0;
+ height: 140%;
+ z-index: 9;
+}
+
+.project h1{
+  font-size: 7vw;
 }
 
 /* contact section */

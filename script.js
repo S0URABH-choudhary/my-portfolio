@@ -234,3 +234,31 @@ shownotification = (msg) => {
     toast.remove();
    },5500);
 }
+
+// ============================================ moving image for project sectoon ======================================================
+let project = document.querySelectorAll(".project")
+project.forEach(element => {
+    element.addEventListener("mousemove" ,(dets) => {
+        let diff = dets.clientY - element.getBoundingClientRect().top
+        gsap.to(element.querySelector("img"),{
+            opacity: 1,
+            ease: Power1,
+            y: diff,
+            x: dets.clientX
+        })
+        gsap.to(cursor,{
+            opacity:0,
+            scale:0
+        })
+    })
+    element.addEventListener("mouseleave",function () {
+        gsap.to(element.querySelector("img"),{
+            opacity:0,
+            ease:Power1
+        })
+        gsap.to(cursor,{
+            opacity:1,
+            scale:1
+        })
+    });
+});
