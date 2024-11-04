@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All projects</title>
+  <style>
+    @font-face {
+      font-family: acumin;
+      src: url(../../fonts/Acumin-RPro.otf);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: acumin;
+    }
+
+    :root {
+      --primary-color: black;
+      --primary-color-2: rgb(10, 9, 9);
+      --secondary-color: white;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    .main {
+      padding: 2vw 1vw;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+      gap: 10px;
+    }
+
+    .tittle {
+      padding: 1vw 3vw;
+      display: flex;
+      justify-content: center;
+      border-radius: 50px;
+      background-color: var(--primary-color-2);
+    }
+
+    .project-links {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 1vw 3vw;
+      width: 80%;
+      border-radius: 50px;
+      height: max-content;
+      background-color: var(--primary-color-2);
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="tittle">
+      <h1>all projects</h1>
+    </div>
+    <div class="project-links">
+      <h3>basic chat app name "convo" :- <a href="https://convo-1-wsrt.onrender.com/">https://convo-1-wsrt.onrender.com</a></h3>
+    </div>
+  </div>
+</body>
+
+</html>
