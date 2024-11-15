@@ -26,9 +26,7 @@ gsap.to(moon,{
     duration:1.5
 })
 gsap.to(stars,{
-    opacity:1,
-    duration:2,
-    delay:.25
+    opacity:1
 })
 
 
@@ -36,6 +34,7 @@ gsap.to(stars,{
 toggle.addEventListener("click",() => {
     if (!toggle.checked){
         body.classList.add("light-theme")
+        document.getElementById("snor").style.display="block"
         gsap.to(avtarbackground,{
             backgroundColor:"skyblue"
         })
@@ -59,6 +58,7 @@ toggle.addEventListener("click",() => {
         })
     }else{
         body.classList.remove("light-theme") 
+        document.getElementById("snor").style.display="none"
         gsap.to(avtarbackground,{
             backgroundColor:"#2e4482d0"
         })  
