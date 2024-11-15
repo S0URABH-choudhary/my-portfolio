@@ -25,6 +25,9 @@
   opacity: 0;
 }
 
+.main{
+  overflow: hidden;
+}
 
 * {
   margin: 0;
