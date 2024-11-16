@@ -432,8 +432,16 @@ nav {
 .about-image img{
   height: 130px;
   width: 130px;
-  border: 2px solid white;
+  object-fit: cover;
+  object-position: 0 20% ;
   border-radius: 100%;
+  filter: grayscale(100%) contrast(130%) brightness(90%);
+  transition-property: filter;
+}
+
+.about-image img:hover {
+  filter: grayscale(0) contrast(130%) brightness(90%);;
+  transition:  ease-in-out .5s;
 }
 
 .about-info{
