@@ -6,17 +6,23 @@
 :root{
   --primary-color: black;
   --primary-color-2: rgb(20, 20, 21);
+  --primary-color-3: rgb(43, 41, 41);
   --secondary-color: white;
   --secondary-color-2: rgb(186, 183, 183);
   --tertiary-color: #209CEE;
+  --hover-color: #7c7a7a;
+  --active-color: #3D3D3D;
 }
 
 .light-theme{
   --primary-color: white;
   --primary-color-2: white;
+  --primary-color-3: white;
   --secondary-color: black;
   --secondary-color-2: black;
   --tertiary-color: #209CEE;
+  --hover-color: rgb(219, 215, 215);
+  --active-color: #ECECEC;
 }
 .light-theme .avatarnight{
   display: none;
@@ -626,14 +632,15 @@ nav {
   font-weight: 400;
   cursor: pointer;
   margin-bottom: 1vw;
+  background-color: var(--primary-color-3);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   
 }
 .names:hover{
-  background-color: #3D3D3D;background-color: var(--primary-color-2);
+  background-color: var(--hover-color);
 }
 .active{
-  background-color: #7c7a7a;
+  background-color: var(--active-color);
 }
 .preview{
   display: flex;
@@ -776,18 +783,21 @@ nav {
   align-items: flex-end;
   flex-direction: column-reverse;
   padding: 20px;
+
 }
 
 .notification-msg{
   width: 350px;
   height: 60px;
-  background: white;
+  background: var(--primary-color-3);
   font-weight: 500;
   margin: 15px 0;
-  color: black;
-  box-shadow: 0 0 20px;
+  color: var(--secondary-color);
+  border-radius: 20px;
   position: relative;
   display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   align-items: center;
 }
 .notification-msg i{
@@ -857,10 +867,10 @@ nav {
   font-weight: 500;
   line-height: 45px;
   font-size: large;
-  color: black;
+  color: var(--secondary-color);
 }
 .contact-form-image h1 {
-  color: rgb(134, 78, 242);
+  color: rgb(164, 132, 229);
 }
 
 .contact-form form {
@@ -873,11 +883,13 @@ nav {
   margin-bottom: 0px;
 }
 
-form input,
-label {
-  color: black;
+form label {
+  color: var(--secondary-color);
 }
 
+form input{
+  color: black;
+}
 form label,
 button {
   margin-top: 20px;
@@ -888,6 +900,7 @@ textarea {
   padding: 10px 3px;
   border: 2px solid rgb(215, 212, 212);
   border-radius: 5px;
+  outline: transparent;
 }
 
 form button {
@@ -895,8 +908,8 @@ form button {
   padding: 15px 25px;
   border: none;
   border-radius: 8px;
-  color: white;
-  background-color: rgb(134, 78, 242);
+  color: var(--secondary-color);
+  background-color: rgb(160, 114, 251);
 }
 
 #email-statue{
