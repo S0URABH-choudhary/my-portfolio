@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
     <link
       rel="apple-touch-icon"
@@ -29,23 +29,25 @@
   <body>
     <div class="main">
       <div class="circle"></div>
-      <!-- ---------------------------------------------------------navbar start----------------------------------------------------------------- -->
-      <nav>
-        <div class="navbar-left">
+      <!-----------------------------------------------------------navbar start----------------------------------------------------------------- -->
+      <i class="fa-solid fa-bars" id="toggle-nav-button-open"  onclick="togglemininav()"></i>
+      <i class="fa-solid fa-x" id="toggle-nav-button-close"  onclick="togglemininav()"></i>
+      <nav id="navbar">
+        <div class="navbar-left" id="navbar-left">
           <h4><a href="#home">Saurabh</a></h4>
-          <h3><a href="#about">About</a></h3>
-          <h3><a href="#skill">Skills</a></h3>
-          <h3><a href="#project-section">project</a></h3>
+          <h3><a href="#about" onclick="togglemininav()">About</a></h3>
+          <h3><a href="#skill" onclick="togglemininav()">Skills</a></h3>
+          <h3><a href="#project-section" onclick="togglemininav()">project</a></h3>
         </div>
-        <div class="navbar-right">
+        <div class="navbar-right" id="navbar-right">
           <div class="toggle-button">
             <label class="switch" for="checkbox">
-              <input type="checkbox" id="checkbox" checked />
+              <input type="checkbox" id="checkbox" checked/>
               <div class="slider round"></div>
             </label>
           </div>
           <div class="contact-wrap">
-            <h3><a class="text" href="#contact">Contact me</a></h3>
+            <h3><a class="text" href="#contact" onclick="togglemininav()">Contact me</a></h3>
           </div>
         </div>
       </nav>
@@ -109,7 +111,6 @@
       <div id="about" class="about-wrapper">
         <section class="about">
           <div class="about-tittle"><h1>about</h1></div>
-          <div class="about-image"><img src="./assets/WhatsApp_Image_2024-11-16_at_13.55.17_311ac040-removebg-preview.png" alt="image" /></div>
           <div class="about-info">
             <p>
               I am saurabh, <br /><br/>
@@ -123,64 +124,22 @@
               and impeccable typography are my top priotities.
             </p>
           </div>
+          <div class="about-image-stack-container">
+            <div class="about-image"><img src="./assets/WhatsApp_Image_2024-11-16_at_13.55.17_311ac040-removebg-preview.png" alt="image" /></div>
+            <div class="stack-i-use">
+              <div class="my-stack-tittle"><p>My stack</p></div>
+              <div class="my-stack">
+                <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/>
+                <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3"/>
+                <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
+                <img width="48" height="48" src="https://img.icons8.com/color/48/react-native.png" alt="react-native"/>
+                <img width="48" height="48" src="https://img.icons8.com/color/48/tailwind_css.png" alt="tailwind_css"/>
+              </div>
+            </div>
+          </div>
+
         </section>
       </div>
-
-      <!--------------------------------------- skill section starts---------------------------------------------------------------------->
-      <section id="skill" class="skill">
-        <div class="skill-tittle">
-          <h1>Skills</h1>
-        </div>
-        <div class="skill-card">
-          <div class="skill-background">
-            <img src="./assets/html-5.png" alt="image" />
-          </div>
-          <div class="skill-content">
-            <img src="./assets/html-5 (1).png" alt="image" />
-            <h3>HTML5</h3>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-background">
-            <img src="./assets/css-3.png" alt="image" />
-          </div>
-          <div class="skill-content">
-            <img src="./assets/css-3 (1).png" alt="image" />
-            <h3>CSS3</h3>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-background">
-            <img src="./assets/JavaScript.png" alt="image" />
-          </div>
-          <div class="skill-content">
-            <img src="./assets/JavaScript_logo_PNG_(1).png" alt="image" />
-            <h3>JavaScript</h3>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-background">
-            <img src="./assets/physics.png" alt="image" />
-          </div>
-          <div class="skill-content">
-            <img src="./assets/React.png" alt="image" />
-            <h3>React.js</h3>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-background">
-            <img src="./assets/Tailwind CSS.png" alt="image" />
-          </div>
-          <div class="skill-content">
-            <img src="./assets/Tailwind CSS.png" alt="image" />
-            <h3>Tailwind</h3>
-          </div>
-        </div>
-        <div class="learning">
-          <h1>more are yet to come</h1>
-        </div>
-      </section>
-      
       <!-------------------------------------------------project section--------------------------------------------------------------->
       <section id="project-section" class="project-section">
       <div class="project-tittle"><h1>Projects</h1></div>
@@ -229,7 +188,6 @@
               style="
                 text-decoration: none;
                 line-height: 5px;
-                margin-bottom: 80px;
                 color: #0a58d4;
               "
               href="mailto:saurabhchoudhary91659@gmail.com"
@@ -250,7 +208,7 @@
               name="email"
               placeholder="Enter your email..."
             />
-            <div style="color: rgb(160, 114, 251)">
+            <div style="color: #836FFF">
               I'll never share your data with anyone else
             </div>
             <label for="your-name">Your name</label>
@@ -285,6 +243,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="object.js"></script>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>

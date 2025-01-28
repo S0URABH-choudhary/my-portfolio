@@ -20,6 +20,7 @@ var contactform = document.getElementById("contact-form")
 
 
 
+
 gsap.to(moon, {
     top: "20%",
     opacity: 1,
@@ -311,3 +312,31 @@ document.addEventListener("DOMContentLoaded", () => {
         namecontainer.appendChild(namediv);
     });
 })
+
+// responsive navbar
+const opennav = document.getElementById("toggle-nav-button-open"); 
+const closenav = document.getElementById("toggle-nav-button-close"); 
+const navbar = document.getElementById("navbar"); 
+const navbarleft = document.getElementById("navbar-left");
+const navbarright = document.getElementById("navbar-right");
+let isclose = true;
+
+function togglemininav () {
+    if (isclose){
+        navbar.style.width = "80%";
+        navbar.style.border = "0.5px solid rgba(224, 220, 220, 0.433)";
+        navbarleft.style.opacity = "1";
+        navbarright.style.opacity = "1";
+        opennav.style.opacity = "0";
+        setTimeout(()=>{closenav.style.opacity = "1";},300)
+        isclose = !isclose
+    }else{
+        navbar.style.width = "0";
+        navbar.style.border = "transparent";
+        navbarleft.style.opacity = "0";
+        navbarright.style.opacity = "0";
+        closenav.style.opacity = "0";
+        setTimeout(()=>{opennav.style.opacity = "1";},300)
+        isclose = !isclose
+    }
+}

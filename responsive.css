@@ -1,74 +1,276 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
+@media only screen and (max-width: 768px) {
+  /* nav bar  */
+  #toggle-nav-button-open,
+  #toggle-nav-button-close {
+    font-size: x-large;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 8vw 8vw;
+    z-index: 999;
+    transition: all ease 0.2s;
+  }
+  #toggle-nav-button-close {
+    opacity: 0;
+  }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
+  nav {
+    height: max-content;
+    padding: 0;
+    margin-top: 0;
+    border-radius: 0;
+    margin-left: 0;
+    width: 0;
+    border: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 50px;
+    flex-direction: column;
+    transition-property: width;
+    transition: all ease 0.5s;
+  }
+  .navbar-left {
+    opacity: 0;
+    margin-top: calc(8vw + 40px);
+    margin-bottom: 40px;
+    flex-direction: column;
+    transition: all ease 0.3s;
+  }
+  .navbar-left::after {
+    display: none;
+  }
+  .navbar-left > h4 {
+    display: none;
+  }
+  .navbar-right {
+    opacity: 0;
+    margin-bottom: 20px;
+    transition: all ease 0.3s;
+  }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
+  /* hero section */
   .hero {
+    height: 100vh;
+    width: 100%;
     flex-direction: column;
   }
-
-  .hero-left h1 {
-    padding-top: 10px;
-    font-size: 20vw;
+  .hero-left {
+    width: 100%;
   }
-
-  .hero-left h4 {
-    width: max-content;
-    font-weight: 300;
-    font-size: 4vw;
-    color: #A9A8A8;
-}
-
   .hero-right {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5vw;
     width: 100%;
-    height: 10vh;
   }
-  
+  .social-media {
+    height: 43%;
+    width: 15%;
+    border: 0.5px solid rgba(224, 220, 220, 0.433);
+  }
+  .avtarbackgroung,
+  .window,
+  .avatar,
+  .avatarnight,
+  .blueprint {
+    scale: 0.7;
+  }
 
-  .social-media{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  .avtarbackgroung {
+    width: 130%;
+    height: 130%;
+    margin: 0;
+  }
+  .window {
+    position: absolute;
+    margin: 0;
+    top: 8%;
+    left: 15%;
+    height: 160px;
+    width: 175px;
+    background-color: #2e4482d0;
+    overflow: hidden;
+  }
+  .avatar {
+    margin: 0;
+  }
+  .avatarnight {
+    margin: 0;
+  }
+  .blueprint {
+    top: 48%;
+    left: 10%;
+  }
+
+  /* about section */
+  .about-wrapper {
+    justify-content: start;
+  }
+  .about {
+    width: 100vw;
+    padding: 10px;
+    row-gap: 10px;
+  }
+
+  .about-image {
+    height: 30%;
+    width: 30vw;
+    border-radius: 15px;
+    border: 0.5px solid rgba(224, 220, 220, 0.433);
+  }
+  .about-image img {
+    height: 80px;
+    width: 80px;
+  }
+  .about-info {
+    padding: 20px 20px;
     height: 100%;
-    width: max-content;
-    border: 1px solid white;
-    border-radius: 50px;
-    gap: 20px;
-    grid-column: 1;
+    border-radius: 15px;
+    width: 97%;
+    grid-row: 2;
+    margin-right: 10px;
+    grid-column: 1 / span 2;
+    border: 0.5px solid rgba(224, 220, 220, 0.433);
+  }
+  .about-image-stack-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+  }
+  .stack-i-use {
+    padding: 1vw;
+    width: 60vw;
+    margin: 0;
+    border-radius: 15px;
+    border: 0.5px solid rgba(224, 220, 220, 0.433);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--primary-color-2);
   }
 
-  .social-media a{
-    padding: 5px 6px;
+  /* project section */
+  .project-section {
+    margin-top: 80px;
   }
-}
-
-@media only screen and (min-width: 992px) {
-  .hero-left h1 {
+  .project-container {
+    margin-bottom: -25%;
+    width: 90%;
+  }
+  .project-tittle h1 {
+    font-size: 7.5vw;
+  }
+  .project-names-container {
+    border-radius: 15px;
+    height: 100%;
+    border: 0.5px solid rgba(224, 220, 220, 0.433);
+  }
+  .project-details {
+    height: 30%;
+  }
+  .project-preview {
+    border-radius: 15px;
+  }
+  .all-projects h1 {
+    margin-top: 10px;
+    font-size: 3.5vw;
+  }
+  .names {
+    padding-left: 10px;
+    font-size: 11px;
+    width: 90%;
+    border: 0.5px solid rgba(224, 220, 220, 0.433);
+  }
+  .discription-container {
+    border-radius: 15px;
+    width: 85%;
+    border: 0.5px solid rgba(224, 220, 220, 0.433);
+  }
+  .project-discription-tittle h1 {
+    margin-top: 10px;
+    font-size: 4.5vw;
+  }
+  #livelink,
+  #sourcelink h4 {
+    font-size: 11px;
+  }
+  #discription {
     padding-top: 10px;
-    font-size: 100px;
+    padding-left: 4vw;
   }
-  .hero-left h4:nth-child(3){
-    margin-top: 50px;
+  #sourcelink,
+  #livelink {
+    border: 0.5px solid rgba(224, 220, 220, 0.433);
   }
-  .social-media{
-    left: 91%;
-    top: 60%;
+  .stack-container {
+    border-radius: 15px;
+    width: 16%;
+    border: 0.5px solid rgba(224, 220, 220, 0.433);
+  }
+  .stack-container i {
+    font-size: 20px;
+  }
+  /* custom cursor  */
+  .circle {
+    display: none;
+  }
+  /* contact section */
+  .contact {
+    height: 85vh;
+  }
+  .contact-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: opx;
+    height: 90%;
+    width: 95%;
+    border: 0.5px solid rgba(224, 220, 220, 0.433);
+  }
+  .contact-form form {
+    height: 80%;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 0px;
+    z-index: 1;
+  }
+  .contact-form-image {
+    display: flex;
+
+    z-index: 1;
+  }
+  .contact-form-image a {
+    margin-bottom: 0;
+  }
+  .contact-form-image img {
+    display: none;
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 426px) {
+  .project-container {
+    margin-bottom: -55%;
+    width: 90%;
+  }
+  /* hero */
+  .hero-left {
+    width: 100%;
+    height: fit-content;
+    margin-top: 30%;
+  }
+  .hero-right {
+    width: 100%;
+    height: 50vh;
+  }
+  .hero-left h4 {
+    font-size: 5.5vw;
+    width: max-content;
+  }
+  .hero-left h1 {
+    padding-block: 10px;
+    font-size: 18vw;
+  }
 }
