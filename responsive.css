@@ -67,15 +67,16 @@
     width: 100%;
   }
   .social-media {
-    height: 43%;
+    height: max-content;
     width: 15%;
     border: 0.5px solid rgba(224, 220, 220, 0.433);
+    z-index: 999;
   }
   .avtarbackgroung,
   .window,
   .avatar,
   .avatarnight,
-  .blueprint {
+  .blueprint,#frame {
     scale: 0.7;
   }
 
@@ -84,16 +85,16 @@
     height: 130%;
     margin: 0;
   }
-  .window {
+  .window,#frame {
     position: absolute;
     margin: 0;
     top: 8%;
     left: 15%;
     height: 160px;
     width: 175px;
-    background-color: #2e4482d0;
     overflow: hidden;
   }
+
   .avatar {
     margin: 0;
   }
