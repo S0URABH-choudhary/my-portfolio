@@ -30,6 +30,7 @@
     flex-direction: column;
     transition-property: width;
     transition: all ease 0.5s;
+    z-index: 1;
   }
   .navbar-left {
     opacity: 0;
